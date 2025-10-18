@@ -6,7 +6,7 @@
         "start:dev": "vite"
     },
     "devDependencies": {
-        "@tailwindcss/postcss": "^4.1.4",
+        "@tailwindcss/postcss": "^4.1.14",
         "@tailwindcss/vite": "^4.1.4",
         "@types/node": "^22.14.1",
         "@vitejs/plugin-vue": "^5.2.3",
