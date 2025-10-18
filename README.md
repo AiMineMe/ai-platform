@@ -64,3 +64,24 @@ Built with modern web technologies: **Laravel 12, Vue 3, Inertia.js, TailwindCSS
 © 2025 AiMineMe™ — All Rights Reserved.  
 This platform and its source code are proprietary and legally protected.  
 Unauthorized use, duplication, or distribution is strictly prohibited.
+
+---
+
+## Installation & Setup
+
+Follow the steps below to install and run the AiMineMe platform locally or on your development server.
+
+### 1. Requirements
+Ensure your system meets the following minimum requirements:
+- PHP 8.2 or higher  
+- Composer  
+- Node.js 20+ and NPM  
+- MySQL 8.0+  
+- Git (for cloning the repository)
+
+---
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/AiMineMe/platform.git
+cd platform
