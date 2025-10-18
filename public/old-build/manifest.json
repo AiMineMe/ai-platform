@@ -1,0 +1,131 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DXCJQHF2.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/Components/Frontend/AdvancedFeature.vue": {
+    "file": "assets/AdvancedFeature-CetFRkmo.js",
+    "name": "AdvancedFeature",
+    "src": "resources/js/Components/Frontend/AdvancedFeature.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/AdvancedFeature-W281GJyp.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/Blog.vue": {
+    "file": "assets/Blog-_VK0s-07.js",
+    "name": "Blog",
+    "src": "resources/js/Components/Frontend/Blog.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Blog-Bpwi9fk4.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/CryptoPrice.vue": {
+    "file": "assets/CryptoPrice-BIHD66X0.js",
+    "name": "CryptoPrice",
+    "src": "resources/js/Components/Frontend/CryptoPrice.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/CryptoPrice-95Y9dS1W.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/Hero.vue": {
+    "file": "assets/Hero-BW-r4fTe.js",
+    "name": "Hero",
+    "src": "resources/js/Components/Frontend/Hero.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Hero-Di7cdNGg.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/Mining.vue": {
+    "file": "assets/Mining-DdLWZ7ox.js",
+    "name": "Mining",
+    "src": "resources/js/Components/Frontend/Mining.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Mining-Cd_orTRn.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/Network.vue": {
+    "file": "assets/Network-Bg_xwQWe.js",
+    "name": "Network",
+    "src": "resources/js/Components/Frontend/Network.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Network-CoHKUYPt.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/Components/Frontend/Service.vue": {
+    "file": "assets/Service-D1dgmjpi.js",
+    "name": "Service",
+    "src": "resources/js/Components/Frontend/Service.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Service-B8sDpL0T.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CdVTBsg_.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/lang/en.json",
+      "resources/js/Components/Frontend/Hero.vue",
+      "resources/js/Components/Frontend/CryptoPrice.vue",
+      "resources/js/Components/Frontend/Service.vue",
+      "resources/js/Components/Frontend/AdvancedFeature.vue",
+      "resources/js/Components/Frontend/Mining.vue",
+      "resources/js/Components/Frontend/Network.vue",
+      "resources/js/Components/Frontend/Blog.vue",
+      "resources/js/Components/Frontend/Hero.vue",
+      "resources/js/Components/Frontend/CryptoPrice.vue",
+      "resources/js/Components/Frontend/Service.vue",
+      "resources/js/Components/Frontend/AdvancedFeature.vue",
+      "resources/js/Components/Frontend/Mining.vue",
+      "resources/js/Components/Frontend/Network.vue",
+      "resources/js/Components/Frontend/Blog.vue"
+    ],
+    "css": [
+      "assets/app-u1WdZ-Z1.css",
+      "assets/app-DXCJQHF2.css"
+    ]
+  },
+  "resources/js/lang/en.json": {
+    "file": "assets/en-JzOTqHky.js",
+    "name": "en",
+    "src": "resources/js/lang/en.json",
+    "isDynamicEntry": true
+  }
+}

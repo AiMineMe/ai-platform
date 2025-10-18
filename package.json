@@ -1,0 +1,35 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "start:dev": "vite"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.4",
+        "@tailwindcss/vite": "^4.1.4",
+        "@types/node": "^22.14.1",
+        "@vitejs/plugin-vue": "^5.2.3",
+        "autoprefixer": "^10.4.21",
+        "axios": "^1.10.0",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.5.3",
+        "postcss-import": "^16.1.0",
+        "tailwindcss": "^4.1.4",
+        "typescript": "^5.8.3",
+        "vite": "^6.2.4"
+    },
+    "dependencies": {
+        "@headlessui/vue": "^1.7.23",
+        "@heroicons/vue": "^2.2.0",
+        "@inertiajs/core": "^2.0.13",
+        "@inertiajs/vue3": "^2.0.13",
+        "chart.js": "^4.4.9",
+        "lodash": "^4.17.21",
+        "lucide-vue-next": "^0.511.0",
+        "vue": "^3.5.13",
+        "vuedraggable": "^2.24.3",
+        "ziggy-js": "^2.5.2"
+    }
+}

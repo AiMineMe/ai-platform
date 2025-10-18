@@ -1,0 +1,631 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+    .bg-slate-950 {
+        background-color: #020617;
+    }
+    .bg-slate-900 {
+        background-color: #0f172a;
+    }
+    .bg-slate-800 {
+        background-color: #1e293b;
+    }
+    .bg-slate-700 {
+        background-color: #334155;
+    }
+    .border-slate-700 {
+        border-color: #334155;
+    }
+    .border-slate-600 {
+        border-color: #475569;
+    }
+    .text-slate-400 {
+        color: #94a3b8;
+    }
+    .text-slate-300 {
+        color: #cbd5e1;
+    }
+}
+
+:root {
+    --select-bg: rgba(31, 41, 55, 0.5);
+    --select-border: #4b5563;
+    --select-text: #ffffff;
+    --select-focus-border: #3b82f6;
+    --select-hover-border: #6b7280;
+    --option-bg: #1f2937;
+    --option-hover-bg: #374151;
+    --dropdown-arrow: '%2394a3b8';
+}
+
+[data-theme="light"] {
+    --select-bg: rgba(248, 250, 252, 0.8);
+    --select-border: #cbd5e1;
+    --select-text: #1e293b;
+    --select-focus-border: #3b82f6;
+    --select-hover-border: #94a3b8;
+    --option-bg: #ffffff;
+    --option-hover-bg: #f1f5f9;
+    --dropdown-arrow: '%2364748b';
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--select-bg);
+    border: 1px solid var(--select-border);
+    border-radius: 0.5rem;
+    color: var(--select-text);
+    font-size: 0.875rem;
+    font-family: inherit;
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.5;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='var(--dropdown-arrow)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--select-focus-border);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background-color: var(--select-bg);
+}
+
+select:hover:not(:disabled) {
+    border-color: var(--select-hover-border);
+}
+
+select option {
+    background-color: var(--option-bg);
+    color: var(--select-text);
+    padding: 0.5rem 0.75rem;
+    border: none;
+    line-height: 1.5;
+}
+
+select option:hover {
+    background-color: var(--option-hover-bg);
+}
+
+select option:checked,
+select option:selected {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+@supports (-webkit-appearance: none) {
+    select {
+        -webkit-border-radius: 0.5rem;
+        -webkit-background-clip: padding-box;
+    }
+
+    select::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    select::-webkit-scrollbar-track {
+        background: var(--option-bg);
+        border-radius: 4px;
+    }
+
+    select::-webkit-scrollbar-thumb {
+        background: var(--select-border);
+        border-radius: 4px;
+    }
+
+    select::-webkit-scrollbar-thumb:hover {
+        background: var(--select-hover-border);
+    }
+}
+
+select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: rgba(31, 41, 55, 0.2);
+    color: #6b7280;
+}
+
+[data-theme="light"] select:disabled {
+    background-color: rgba(241, 245, 249, 0.5);
+    color: #94a3b8;
+}
+
+select[multiple] {
+    background-image: none;
+    padding: 0.5rem;
+    height: auto;
+    min-height: 6rem;
+}
+
+select[multiple] option {
+    padding: 0.375rem 0.5rem;
+    margin: 0.125rem 0;
+    border-radius: 0.25rem;
+}
+
+select[multiple] option:checked {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+select.select-sm {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    font-size: 0.75rem;
+    background-size: 0.875rem;
+    background-position: right 0.5rem center;
+}
+
+select.select-lg {
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: 1rem;
+    background-size: 1.25rem;
+    background-position: right 1rem center;
+}
+
+select.error {
+    border-color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+select.error:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+select.success {
+    border-color: #10b981;
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+select.success:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+@media (max-width: 768px) {
+    select {
+        padding: 0.875rem 2.25rem 0.875rem 0.875rem;
+        font-size: 1rem;
+        min-height: 2.75rem;
+    }
+
+    select.select-sm {
+        padding: 0.75rem 2rem 0.75rem 0.75rem;
+        font-size: 0.875rem;
+        min-height: 2.5rem;
+    }
+}
+
+@media (prefers-contrast: high) {
+    select {
+        border-width: 2px;
+        border-color: currentColor;
+    }
+
+    select:focus {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    select {
+        transition: none;
+    }
+}
+
+@media print {
+    select {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        background-image: none;
+    }
+}
+/* ==========================================================================
+   Cross-Browser Smooth Scrolling & Scroll Effects
+   Support: IE9+, Firefox, Safari, Opera, Chrome, Edge
+   ========================================================================== */
+
+/* Smooth Scrolling - Cross Browser */
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+}
+
+/* IE9-11 Smooth Scroll Fallback using jQuery */
+.ie9, .ie10, .ie11 {
+    scroll-behavior: auto;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+}
+
+::-webkit-scrollbar-corner {
+    background: #1f2937;
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #374151 #1f2937;
+}
+
+/* IE Scrollbar Colors */
+body {
+    -ms-overflow-style: scrollbar;
+    scrollbar-face-color: #374151;
+    scrollbar-track-color: #1f2937;
+    scrollbar-arrow-color: #9ca3af;
+    scrollbar-shadow-color: #1f2937;
+}
+
+/* Scroll Snap - Cross Browser */
+.scroll-snap-x {
+    -webkit-scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-y {
+    -webkit-scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-start {
+    -webkit-scroll-snap-align: start;
+    -ms-scroll-snap-align: start;
+    scroll-snap-align: start;
+}
+
+.scroll-snap-center {
+    -webkit-scroll-snap-align: center;
+    -ms-scroll-snap-align: center;
+    scroll-snap-align: center;
+}
+
+/* Parallax Scrolling Effect - Cross Browser */
+.parallax {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+/* IE Parallax Fallback */
+.ie9 .parallax,
+.ie10 .parallax {
+    transform: none;
+    position: relative;
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* IE Scroll Reveal Fallback */
+.ie9 .scroll-reveal,
+.ie10 .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    filter: alpha(opacity=100);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: -webkit-linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: -moz-linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: -ms-linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: -o-linear-gradient(90deg, #3b82f6, #8b5cf6);
+    z-index: 9999;
+    -webkit-transition: width 0.1s ease-out;
+    -moz-transition: width 0.1s ease-out;
+    -ms-transition: width 0.1s ease-out;
+    -o-transition: width 0.1s ease-out;
+    transition: width 0.1s ease-out;
+}
+
+/* IE Progress Bar Fallback */
+.ie9 .scroll-progress,
+.ie10 .scroll-progress,
+.ie11 .scroll-progress {
+    background: #3b82f6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b82f6', endColorstr='#8b5cf6', GradientType=1);
+}
+
+/* Sticky Navigation on Scroll */
+.sticky-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sticky-nav.scrolled {
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    background: rgba(15, 23, 42, 0.95);
+    -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* IE Sticky Navigation Fallback */
+.ie9 .sticky-nav,
+.ie10 .sticky-nav {
+    position: fixed;
+}
+
+.ie9 .sticky-nav.scrolled,
+.ie10 .sticky-nav.scrolled,
+.ie11 .sticky-nav.scrolled {
+    background: #0f172a;
+    filter: alpha(opacity=95);
+}
+
+/* Smooth Page Transitions */
+.page-transition {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-transition.fade-out {
+    opacity: 0;
+}
+
+/* IE Page Transition Fallback */
+.ie9 .page-transition.fade-out,
+.ie10 .page-transition.fade-out {
+    filter: alpha(opacity=0);
+}
+
+/* Scroll-triggered Scale Effects */
+.scale-on-scroll {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0.8;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.scale-on-scroll.visible {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* IE Scale Effect Fallback */
+.ie9 .scale-on-scroll,
+.ie10 .scale-on-scroll {
+    zoom: 0.95;
+    filter: alpha(opacity=80);
+}
+
+.ie9 .scale-on-scroll.visible,
+.ie10 .scale-on-scroll.visible {
+    zoom: 1;
+    filter: alpha(opacity=100);
+}
+
+/* Scroll Direction Classes */
+.scroll-up {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.scroll-down {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+/* IE Scroll Direction Fallback */
+.ie9 .scroll-down,
+.ie10 .scroll-down {
+    top: -100px;
+}
+
+/* Momentum Scrolling for iOS */
+.momentum-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+/* Scroll Margin for Skip Links */
+.scroll-margin-top {
+    scroll-margin-top: 80px;
+    -webkit-scroll-margin-top: 80px;
+}
+
+/* Intersection Observer Fallback for IE */
+.intersection-observer-fallback {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        -webkit-scroll-behavior: auto;
+    }
+
+    .scroll-reveal,
+    .scale-on-scroll,
+    .parallax {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        animation: none !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+    }
+
+    .scroll-reveal {
+        opacity: 1 !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .scroll-progress {
+        background: currentColor;
+        height: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: currentColor;
+        border: 1px solid;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .scroll-progress,
+    .sticky-nav {
+        display: none !important;
+    }
+
+    .scroll-reveal,
+    .scale-on-scroll {
+        opacity: 1 !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+    }
+}
+
+/* JavaScript Enhancement Classes */
+.js .no-js-only {
+    display: none !important;
+}
+
+.no-js .js-only {
+    display: none !important;
+}
+
+/* Smooth Anchor Link Scrolling */
+a[href^="#"] {
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+/* Focus Visible for Keyboard Navigation */
+.focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* IE Focus Fallback */
+.ie9 .focus-visible,
+.ie10 .focus-visible,
+.ie11 .focus-visible {
+    border: 2px dotted #3b82f6;
+}
+
+/* End of Scroll & Smooth Effects CSS */
