@@ -1,12 +1,21 @@
 # AiMineMe — Professional AI-Powered Trading & Mining Platform
 
-AiMineMe is a next-generation cryptocurrency trading and gamified mining platform,  
-engineered for performance, transparency, and scalability.  
+![Version](https://img.shields.io/badge/version-v1.0.2-blue)
+![License](https://img.shields.io/badge/license-Proprietary-red)
+![Framework](https://img.shields.io/badge/framework-Laravel%2012.x-orange)
+![Frontend](https://img.shields.io/badge/frontend-Vue%203-green)
+![Database](https://img.shields.io/badge/database-MySQL%208.0+-yellow)
+![Language](https://img.shields.io/badge/language-PHP%208.2+-lightgrey)
+
+---
+
+**AiMineMe** is a next-generation cryptocurrency trading and gamified mining platform,  
+engineered for **performance, transparency, and scalability**.  
 Built with modern web technologies: **Laravel 12, Vue 3, Inertia.js, TailwindCSS, MySQL 8, and PHP 8.2**.
 
 ---
 
-## Key Features
+## 🧩 Key Features
 
 ### Professional Binary Trading
 - Real-time UP/DOWN trading engine  
@@ -32,7 +41,7 @@ Built with modern web technologies: **Laravel 12, Vue 3, Inertia.js, TailwindCSS
 
 ---
 
-## User Security & Compliance
+## 🔒 User Security & Compliance
 - Full KYC verification: document, address, and facial recognition  
 - Two-Factor Authentication (2FA)  
 - IP, browser, and device session tracking  
@@ -40,7 +49,7 @@ Built with modern web technologies: **Laravel 12, Vue 3, Inertia.js, TailwindCSS
 
 ---
 
-## Technical Stack
+## ⚙️ Technical Stack
 
 | Layer | Technology |
 |-------|-------------|
@@ -54,13 +63,13 @@ Built with modern web technologies: **Laravel 12, Vue 3, Inertia.js, TailwindCSS
 
 ---
 
-## Contact
+## 🌐 Contact
 
 **Official Website:** [https://aimineme.com](https://aimineme.com)  
 **Support Email:** support@aimineme.com  
 
 ---
 
-© 2025 AiMineMe™ — All Rights Reserved.  
+© 2025 **AiMineMe™** — All Rights Reserved.  
 This platform and its source code are proprietary and legally protected.  
 Unauthorized use, duplication, or distribution is strictly prohibited.
